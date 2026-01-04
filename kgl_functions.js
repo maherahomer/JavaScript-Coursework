@@ -68,7 +68,7 @@ for (let key in sale1) {
  //             Part C: Loop Implementation and Data Processing
                  //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-// First by create an array of daily procurement tonnages for a week
+// First by createing an array of daily procurement tonnages for a week
 let weeklyTonnage = [1200, 1500, 980, 2000, 1100, 1800, 1300];
 let totalTonnage = 0;
 
@@ -103,3 +103,19 @@ for (let record of salesRecords) {
     creditSalesCount++;
 }
 console.log(`Total credit sales: ${creditSalesCount}`);
+
+// Simulate a stock check,
+
+// create an array
+let inventory = [
+{name: 'Beans', tonnage: 500},
+{name: 'Maize', tonnage: 0},
+{name: 'G-nuts', tonnage: 300}
+];
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].tonnage === 0) {
+        console.log(`Manager Alert: ${inventory[i].name} is out of stock`);
+        break; // Exit loop immediately
+    }
+}
